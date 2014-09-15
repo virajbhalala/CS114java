@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class inClassProbl1
+{
+	public static void main(String[] args)
+	{
+		LinkedListstack<String> stack1 = new LinkedListstack<String>();
+		LinkedListstack<String> stack2 = new LinkedListstack<String>();
+		
+		Scanner stdin = new Scanner(System.in);
+		String s = stdin.next();
+		
+		int i;
+		for(i = 0; i < s.length(); i++)
+		{
+			stack1.push(s.charAt(i) + "");
+		}
+		for(i = i-1; i >= 0; i--)
+		{
+			stack2.push(s.charAt(i) + "");
+		}
+		boolean palindrome = true;
+		
+		//cat
+		
+		//cat
+		//tac
+		
+		while(!stack1.isEmpty())
+		{
+			if(!stack1.pop().equals(stack2.pop())) palindrome = false;
+		}
+		
+		System.out.println(palindrome);
+	}
+}
